@@ -21,7 +21,8 @@ namespace Bomberman
         }
         private void GenerirajMapa()
         {
-            for(int i=0; i<Rows; i++)
+            Random random = new Random();
+            for (int i=0; i<Rows; i++)
             {
                 for(int j=0; j<Columns; j++)
                 {
@@ -33,10 +34,12 @@ namespace Bomberman
                     {
                         Mapa[i, j] = 1;
                     }
-                    else
-                    {
-                        Mapa[i, j] = 0;
-                    }
+                  
+                        else
+                        {
+                            Mapa[i, j] = 0;
+                        }
+                    
                 }
             }
         }

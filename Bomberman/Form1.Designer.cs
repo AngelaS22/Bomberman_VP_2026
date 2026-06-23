@@ -39,6 +39,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Bomberman";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
 
         }
