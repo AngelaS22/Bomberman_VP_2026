@@ -1,0 +1,10 @@
+C:\Users\PC\source\repos\Bomberman\Bomberman\bin\Debug\Bomberman.exe.config
+C:\Users\PC\source\repos\Bomberman\Bomberman\bin\Debug\Bomberman.exe
+C:\Users\PC\source\repos\Bomberman\Bomberman\bin\Debug\Bomberman.pdb
+C:\Users\PC\source\repos\Bomberman\Bomberman\obj\Debug\Bomberman.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Bomberman\Bomberman\obj\Debug\Bomberman.Form1.resources
+C:\Users\PC\source\repos\Bomberman\Bomberman\obj\Debug\Bomberman.Properties.Resources.resources
+C:\Users\PC\source\repos\Bomberman\Bomberman\obj\Debug\Bomberman.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\Bomberman\Bomberman\obj\Debug\Bomberman.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Bomberman\Bomberman\obj\Debug\Bomberman.exe
+C:\Users\PC\source\repos\Bomberman\Bomberman\obj\Debug\Bomberman.pdb
