@@ -15,14 +15,19 @@ namespace Bomberman
         NacrtajMapa nacrtajMapa;
         Player player1;
         Player player2;
+        List<Bomb> bombi = new List<Bomb>();
         public Form1()
         {
             InitializeComponent();
             this.ClientSize = new Size(600, 520);
             nacrtajMapa = new NacrtajMapa();
-            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
             player1 = new Player(1, 1, nacrtajMapa.GoleminaKelija, Color.Blue);
             player2 = new Player(1, nacrtajMapa.Columns - 2, nacrtajMapa.GoleminaKelija, Color.Red);
+            DoubleBuffered = true;
+            Timer timer = new Timer();
+            timer.Interval = 100;
+            timer.Tick+=new EventHandler(timer1_Tick);
+            timer.Start();
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -48,6 +53,10 @@ namespace Bomberman
             }
             player1.Draw(g);
             player2.Draw(g);
+            foreach(Bomb b in bombi)
+            {
+                b.Draw(g);
+            }
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -100,8 +109,29 @@ namespace Bomberman
                 player2.Rows = newRows2;
                 player2.Columns = newColumns2;
             }
+
+            if(e.KeyCode == Keys.Space)
+            {
+                bombi.Add(new Bomb(player1.Rows, player1.Columns, nacrtajMapa.GoleminaKelija));
+            }
+            if (e.KeyCode == Keys.Enter)
+            {
+                bombi.Add(new Bomb(player2.Rows, player2.Columns, nacrtajMapa.GoleminaKelija));
+            }
        
         Invalidate();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for(int i=bombi.Count-1; i>=0; i--)
+            {
+                if (bombi[i].TrebaEksplozija())
+                {
+                    bombi.RemoveAt(i);
+                }
+            }
+            Invalidate();
         }
     }
 }
