@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="NacrtajMapa.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="PowerUp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
