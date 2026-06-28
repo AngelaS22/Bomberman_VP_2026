@@ -64,13 +64,13 @@ namespace Bomberman
                     int nc = col + dc[d] * k;
 
                     if (nr < 0 || nr >= Rows || nc < 0 || nc >= Columns) break;
-                    if (Mapa[nr, nc] == 1) break; // tvrd zid blokira
+                    if (Mapa[nr, nc] == 1) break; 
 
                     zasegnati.Add(new System.Drawing.Point(nc, nr));
 
-                    if (Mapa[nr, nc] == 2) // rusliв zid - eksplozijata stiga no ne minuva
+                    if (Mapa[nr, nc] == 2) 
                     {
-                        Mapa[nr, nc] = 0; // unistuvanje
+                        Mapa[nr, nc] = 0; 
                         break;
                     }
                 }

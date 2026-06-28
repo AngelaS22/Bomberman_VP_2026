@@ -443,11 +443,11 @@ namespace Bomberman
 
 
             if (player1.Eliminiran && player2.Eliminiran)
-            { winnerText = "🤝 НЕРЕШЕНО!"; gameState = GameState.GameOver; }
+            { winnerText = "НЕРЕШЕНО!"; gameState = GameState.GameOver; }
             else if (player1.Eliminiran)
-            { winnerText = "🔴 ИГРАЧ 2 ПОБЕДИ!"; gameState = GameState.GameOver; }
+            { winnerText = "ИГРАЧ 2 ПОБЕДИ!"; gameState = GameState.GameOver; }
             else if (player2.Eliminiran)
-            { winnerText = "🔵 ИГРАЧ 1 ПОБЕДИ!"; gameState = GameState.GameOver; }
+            { winnerText = "ИГРАЧ 1 ПОБЕДИ!"; gameState = GameState.GameOver; }
 
             Invalidate();
         }
@@ -497,7 +497,6 @@ namespace Bomberman
                 return;
             }
 
-            // Player 1 - WASD
             if (player1.Ziv && !player1.Eliminiran)
             {
                 int r = player1.Rows, c = player1.Columns;
@@ -522,7 +521,6 @@ namespace Bomberman
                 }
             }
 
-            // Player 2 - Strelki
             if (player2.Ziv && !player2.Eliminiran)
             {
                 int r = player2.Rows, c = player2.Columns;
